@@ -72,6 +72,7 @@ export class MovimentacaoService {
       .select('movimentacao.loja', 'loja')
       .addSelect('SUM(movimentacao.natureza * movimentacao.valor)', 'saldo')
       .groupBy('movimentacao.loja')
+      .orderBy('movimentacao.loja', 'ASC')
       .getRawMany();
 
     return list;
