@@ -28,4 +28,7 @@ $ yarn start:front
 ```bash
 # backend
 $ yarn test
+
+# frontend
+$ yarn test:front
 ```
