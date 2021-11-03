@@ -1,0 +1,35 @@
+<div class="content" role="main">
+  <h2>Importar arquivo CNAB</h2>
+  <div class="card-container">
+    <input type="file" class="file-input" (change)="onFileSelected($event)" #fileUpload>
+
+    <div class="file-upload">
+
+      {{fileName || "Aguardando arquivo."}}
+
+      <button mat-mini-fab color="primary" class="card button" (click)="fileUpload.click()">
+        Importar arquivo
+      </button>
+    </div>
+  </div>
+  <h2>Resultado</h2>
+  <div class="card-container">
+    <ul class="lojas">
+      <li *ngFor="let loja of lojas" class="card">
+        <span>{{loja.loja}}</span>
+        <span [ngClass]="loja.saldo >= 0 ? 'green' : 'red'">{{loja.saldo|currency:"BRL":"symbol"}}</span>
+      </li>
+    </ul>
+  </div>
+
+
+
+
+  <!-- <div class="card-container">
+    <input type="file" class="file-upload" onchange="console.log(event.target.files)">
+
+    <button class="card card-small" (click)="submit()" tabindex="0">
+      <span>Enviar</span>
+    </button>
+  </div> -->
+</div>
