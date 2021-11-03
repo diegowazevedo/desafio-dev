@@ -9,6 +9,7 @@
     "docker": "cd backend && docker-compose up",
     "start:api": "cd backend && nest start",
     "start:front": "cd frontend && yarn start",
-    "test": "cd backend && jest"
+    "test": "cd backend && jest",
+    "test:front": "cd frontend && ng test"
   }
 }
