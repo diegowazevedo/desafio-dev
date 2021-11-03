@@ -1,0 +1,14 @@
+{
+  "name": "bycoders-challenge",
+  "version": "1.0.0",
+  "description": "",
+  "author": "",
+  "private": true,
+  "license": "UNLICENSED",
+  "scripts": {
+    "docker": "cd backend && docker-compose up",
+    "start:api": "cd backend && nest start",
+    "start:front": "cd frontend && yarn start",
+    "test": "cd backend && jest"
+  }
+}
